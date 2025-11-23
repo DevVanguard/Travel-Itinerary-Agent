@@ -6,8 +6,46 @@ def research_destination(destination: str, interests: List[str] = None) -> Dict:
     if interests is None:
         interests = ["sightseeing"]
     
-    # Destination database - we'll expand this later
+    # Enhanced destination database with Pakistan cities
     destinations_db = {
+        # Pakistan Cities
+        "islamabad": {
+            "attractions": ["Faisal Mosque", "Daman-e-Koh", "Pakistan Monument", "Lok Virsa Museum", "Margalla Hills", "Rawal Lake"],
+            "activities": ["Hiking in Margalla Hills", "Mosque visits", "Museum tours", "Boating", "Cultural shows"],
+            "best_season": "Spring (March-May) and Autumn (September-November)",
+            "cost_level": "Medium",
+            "description": "Capital city with beautiful mountains and modern architecture"
+        },
+        "karachi": {
+            "attractions": ["Clifton Beach", "Mazar-e-Quaid", "Frere Hall", "Port Grand", "Mohatta Palace", "Churna Island"],
+            "activities": ["Beach activities", "Historical site visits", "Seafood dining", "Shopping", "Island trips"],
+            "best_season": "Winter (November-February)",
+            "cost_level": "Medium",
+            "description": "Vibrant coastal metropolis and economic hub"
+        },
+        "lahore": {
+            "attractions": ["Lahore Fort", "Badshahi Mosque", "Shalimar Gardens", "Lahore Museum", "Wagah Border", "Anarkali Bazaar"],
+            "activities": ["Historical tours", "Food street visits", "Shopping in bazaars", "Cultural shows", "Border ceremony"],
+            "best_season": "Winter (October-March)",
+            "cost_level": "Low",
+            "description": "Cultural heart of Pakistan with Mughal heritage"
+        },
+        "hunza": {
+            "attractions": ["Baltit Fort", "Attabad Lake", "Passu Cones", "Rakaposhi View", "Eagle's Nest", "Khunjerab Pass"],
+            "activities": ["Mountain trekking", "Lake visits", "Fort exploration", "Photography", "Cultural immersion"],
+            "best_season": "Summer (May-September)",
+            "cost_level": "Low",
+            "description": "Breathtaking mountain valley in the Karakoram range"
+        },
+        "swat": {
+            "attractions": ["Malam Jabba", "Mahodand Lake", "White Palace", "Ushu Forest", "Butkara Stupa", "Swat Museum"],
+            "activities": ["Skiing", "Hiking", "Lake visits", "Historical exploration", "Photography"],
+            "best_season": "Summer (April-September)",
+            "cost_level": "Low", 
+            "description": "Switzerland of Pakistan with stunning valleys"
+        },
+        
+        # Original destinations
         "paris": {
             "attractions": ["Eiffel Tower", "Louvre Museum", "Notre-Dame", "Montmartre", "Seine River Cruise"],
             "activities": ["Museum tours", "River cruise", "Food tasting", "Shopping", "Photography"],

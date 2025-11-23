@@ -12,6 +12,12 @@ def calculate_budget_breakdown(destination: str, duration: int, total_budget: fl
         "paris": {"base_daily": 150, "multiplier": 1.3},
         "tokyo": {"base_daily": 180, "multiplier": 1.5},
         "bali": {"base_daily": 80, "multiplier": 0.8},
+        # Pakistan cities - ADDED NEW DATA
+        "islamabad": {"base_daily": 60, "multiplier": 1.1},
+        "karachi": {"base_daily": 50, "multiplier": 1.0},
+        "lahore": {"base_daily": 45, "multiplier": 0.9},
+        "hunza": {"base_daily": 40, "multiplier": 0.8},
+        "swat": {"base_daily": 35, "multiplier": 0.7},
         "default": {"base_daily": 120, "multiplier": 1.0}
     }
     
@@ -28,7 +34,7 @@ def calculate_budget_breakdown(destination: str, duration: int, total_budget: fl
     
     # Get destination cost data
     dest_data = destination_costs.get(destination.lower(), destination_costs["default"])
-    style_multiplier = style_multipliers.get(travel_style.lower(), 1.0)
+    style_multiplier = style_multipliers.get(travel_style, 1.0)
     
     # Calculate base daily budget per person
     base_daily = dest_data["base_daily"] * style_multiplier * dest_data["multiplier"]
